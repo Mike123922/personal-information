@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="description" content="个人展示平台 - H5 移动端优先" />
+  <title>个人展示平台 · Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ 顶部导航 ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        <span class="nav__logo-text" data-fill="姓名">[ 你的名字 ]</span>
+      </a>
+
+      <button class="nav__menu" id="navMenu" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">关于</a>
+        <a href="#education">教育</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ Hero 板块 ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="grid-bg"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__avatar reveal">
+        <div class="hero__avatar-ring"></div>
+        <div class="hero__avatar-img">
+          <!-- TODO: 把 src 换成你的头像图片路径，例如 assets/avatar.jpg -->
+          <span class="avatar-placeholder">[ 头像 ]</span>
+        </div>
+        <span class="hero__avatar-status" title="在线"></span>
+      </div>
+
+      <p class="hero__greet reveal">
+        <span class="hero__wave">👋</span> Hi, I'm
+      </p>
+
+      <h1 class="hero__name reveal" data-fill="姓名">[ 你的名字 ]</h1>
+
+      <p class="hero__role reveal">
+        <span class="hero__role-prefix">A </span>
+        <span class="hero__role-text" data-fill="岗位/方向">Computer Science Student</span>
+        <span class="hero__cursor">|</span>
+      </p>
+
+      <p class="hero__school reveal" data-fill="学校+专业">
+        上海杉达学院 · 计算机科学与技术 · 大二
+      </p>
+
+      <div class="hero__cta reveal">
+        <a href="#projects" class="btn btn--primary">
+          查看项目 <span aria-hidden="true">→</span>
+        </a>
+        <a href="#contact" class="btn btn--ghost">联系我</a>
+      </div>
+
+      <div class="hero__stats reveal">
+        <div class="stat">
+          <div class="stat__num" data-fill="项目数">12+</div>
+          <div class="stat__label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" data-fill="GPA 或排名">3.8</div>
+          <div class="stat__label">GPA</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" data-fill="获奖数">5+</div>
+          <div class="stat__label">Awards</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="向下滚动">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ 关于我 ============ -->
+  <section class="section" id="about">
+    <header class="section__head reveal">
+      <span class="section__index">01</span>
+      <h2 class="section__title">关于我</h2>
+      <p class="section__sub">About Me</p>
+    </header>
+
+    <div class="about">
+      <div class="about__text reveal">
+        <p class="about__lead" data-fill="个人简介">
+          我是一名就读于上海杉达学院计算机科学与技术专业的二年级学生，对
+          <strong>[ 你感兴趣的方向，如：Web 开发 / AI / 数据科学 ]</strong>
+          充满热情，正在持续学习和探索。
+        </p>
+        <p data-fill="个人补充">
+          [ 在这里写下你的故事：你为什么学计算机？最近在折腾什么？未来的方向是什么？]
+        </p>
+      </div>
+
+      <ul class="about__tags reveal">
+        <li data-fill="标签1">[ 标签 1 ]</li>
+        <li data-fill="标签2">[ 标签 2 ]</li>
+        <li data-fill="标签3">[ 标签 3 ]</li>
+        <li data-fill="标签4">[ 标签 4 ]</li>
+        <li data-fill="标签5">[ 标签 5 ]</li>
+        <li data-fill="标签6">[ 标签 6 ]</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 教育背景 ============ -->
+  <section class="section section--alt" id="education">
+    <header class="section__head reveal">
+      <span class="section__index">02</span>
+      <h2 class="section__title">教育背景</h2>
+      <p class="section__sub">Education</p>
+    </header>
+
+    <div class="timeline">
+      <article class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date" data-fill="在校时间">2024 - 2028（预计）</div>
+        <h3 class="timeline__title" data-fill="学校">上海杉达学院</h3>
+        <p class="timeline__meta" data-fill="专业+学历">计算机科学与技术 · 本科</p>
+        <ul class="timeline__detail" data-fill="主修课程">
+          <li>数据结构与算法</li>
+          <li>计算机组成原理</li>
+          <li>操作系统</li>
+          <li>计算机网络</li>
+          <li>[ 更多课程... ]</li>
+        </ul>
+      </article>
+
+      <article class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date" data-fill="高中时间">2021 - 2024</div>
+        <h3 class="timeline__title" data-fill="高中">[ 你的高中 ]</h3>
+        <p class="timeline__meta" data-fill="高考/选科">理科 · 高中</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 技能栈 ============ -->
+  <section class="section" id="skills">
+    <header class="section__head reveal">
+      <span class="section__index">03</span>
+      <h2 class="section__title">技能栈</h2>
+      <p class="section__sub">Skills</p>
+    </header>
+
+    <div class="skills">
+      <div class="skills__group reveal">
+        <h3 class="skills__group-title">编程语言</h3>
+        <div class="skills__list">
+          <div class="skill" data-skill="C" data-fill="熟练度">85</div>
+          <div class="skill" data-skill="Python" data-fill="熟练度">80</div>
+          <div class="skill" data-skill="JavaScript" data-fill="熟练度">75</div>
+          <div class="skill" data-skill="Java" data-fill="熟练度">60</div>
+        </div>
+      </div>
+
+      <div class="skills__group reveal">
+        <h3 class="skills__group-title">前端 / 框架</h3>
+        <div class="skills__list">
+          <div class="skill" data-skill="HTML / CSS" data-fill="熟练度">85</div>
+          <div class="skill" data-skill="Vue / React" data-fill="熟练度">70</div>
+          <div class="skill" data-skill="Node.js" data-fill="熟练度">60</div>
+        </div>
+      </div>
+
+      <div class="skills__group reveal">
+        <h3 class="skills__group-title">工具 & 其他</h3>
+        <div class="skills__list">
+          <div class="skill" data-skill="Git" data-fill="熟练度">80</div>
+          <div class="skill" data-skill="Linux" data-fill="熟练度">65</div>
+          <div class="skill" data-skill="Docker" data-fill="熟练度">50</div>
+          <div class="skill" data-skill="MySQL" data-fill="熟练度">70</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 项目经历 ============ -->
+  <section class="section section--alt" id="projects">
+    <header class="section__head reveal">
+      <span class="section__index">04</span>
+      <h2 class="section__title">项目经历</h2>
+      <p class="section__sub">Projects</p>
+    </header>
+
+    <div class="projects">
+
+      <article class="project reveal">
+        <div class="project__cover" data-fill="封面图" style="--cover:#dbeafe;">
+          <span class="project__cover-tag">[ 封面占位 ]</span>
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3 class="project__title" data-fill="项目名">个人作品集 H5</h3>
+            <span class="project__date" data-fill="时间">2026.09</span>
+          </div>
+          <p class="project__desc" data-fill="项目描述">
+            从零搭建的移动端优先个人展示页面，包含 Hero、关于、技能、项目、联系等板块，使用纯 HTML/CSS/JS 实现。
+          </p>
+          <div class="project__tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project__links">
+            <a href="#" data-fill="GitHub">GitHub →</a>
+            <a href="#" data-fill="预览">预览 →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project__cover" data-fill="封面图" style="--cover:#fef3c7;">
+          <span class="project__cover-tag">[ 封面占位 ]</span>
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3 class="project__title" data-fill="项目名">[ 项目二 ]</h3>
+            <span class="project__date" data-fill="时间">时间</span>
+          </div>
+          <p class="project__desc" data-fill="项目描述">
+            [ 项目描述：解决什么问题 / 你负责的部分 / 用到的技术 / 取得了什么结果 ]
+          </p>
+          <div class="project__tags">
+            <span data-fill="标签">[ 标签 ]</span>
+            <span data-fill="标签">[ 标签 ]</span>
+            <span data-fill="标签">[ 标签 ]</span>
+          </div>
+          <div class="project__links">
+            <a href="#" data-fill="GitHub">GitHub →</a>
+            <a href="#" data-fill="预览">预览 →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project__cover" data-fill="封面图" style="--cover:#dcfce7;">
+          <span class="project__cover-tag">[ 封面占位 ]</span>
+        </div>
+        <div class="project__body">
+          <div class="project__head">
+            <h3 class="project__title" data-fill="项目名">[ 项目三 ]</h3>
+            <span class="project__date" data-fill="时间">时间</span>
+          </div>
+          <p class="project__desc" data-fill="项目描述">
+            [ 项目描述：解决什么问题 / 你负责的部分 / 用到的技术 / 取得了什么结果 ]
+          </p>
+          <div class="project__tags">
+            <span data-fill="标签">[ 标签 ]</span>
+            <span data-fill="标签">[ 标签 ]</span>
+            <span data-fill="标签">[ 标签 ]</span>
+          </div>
+          <div class="project__links">
+            <a href="#" data-fill="GitHub">GitHub →</a>
+            <a href="#" data-fill="预览">预览 →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 联系我 ============ -->
+  <section class="section section--cta" id="contact">
+    <div class="cta reveal">
+      <span class="section__index">05</span>
+      <h2 class="cta__title">一起搞点有趣的事？</h2>
+      <p class="cta__sub">Let's build something together.</p>
+
+      <a href="mailto:[ 你的邮箱 ]" class="btn btn--primary btn--lg" data-fill="邮箱">
+        ✉️ 发送邮件
+      </a>
+
+      <ul class="cta__socials">
+        <li>
+          <a href="#" data-fill="GitHub 链接">
+            <span class="social-ico">⌥</span>
+            <span data-fill="GitHub 用户名">github.com/yourname</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-fill="邮箱链接">
+            <span class="social-ico">✉</span>
+            <span data-fill="邮箱">you@example.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-fill="微信">
+            <span class="social-ico">◉</span>
+            <span data-fill="微信号">WeChat: yourid</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-fill="掘金/CSDN/知乎">
+            <span class="social-ico">✎</span>
+            <span data-fill="博客">blog.yoursite.com</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="footer">
+    <p>
+      © <span id="year"></span>
+      <span data-fill="姓名">[ 你的名字 ]</span>
+      · Built with ❤️
+    </p>
+    <p class="footer__small">Designed &amp; coded by hand.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
